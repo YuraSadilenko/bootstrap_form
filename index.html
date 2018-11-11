@@ -1,96 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
     <title>Document</title>
 </head>
-<body>
 
-    <h1>Personal information</h1>
-    <form method="post" action="https://mate-academy-form-lesson.herokuapp.com/create-application">
+<body class="bg-light">
 
-        <fieldset>
+    <div class="py-5 text-center">
+        <h1>Personal information</h1>
+    </div>
 
-            <legend> Personal information</legend>  
-
-            <label for="surname">Surname:</label>    
-            <input name="surname" type="text" id="surname"><br>
-            <br>  
-
-            <label for="name">Name:</label>    
-            <input name="name" type="text" id="name"><br>
-            <br>  
-
-            <label for="age">How old are you?:</label>    
-            <input name="age" type="number" id="age"><br>
-            <br>  
-
-            <label for="birth">Full date of birth</label>    
-            <input name="birth" type="date" id="birth"><br>
-            <br>
-
-            <label for="accept">I accept the term of the agreemen </label>
-            <input name="accept" type="checkbox" value="yes" id="accept">
-        </fieldset>
-
-        <fieldset>
-            <legend> Registration </legend>
-
-            <label for="email">E-mail</label>
-            <input name="email" type="email" autocomplete="off" id="email"><br>
-            <br>
-
-            <label for="password">Password</label>
-            <input name="password" type="password" id="password"><br>
-            <br>
-        </fieldset>
-
-        <fieldset>
-            <legend> An interesting fact about you! </legend>
-
-            <p> Do you love cats</p>
-            <label for="yes">Yes</label>
-            <input type="radio" name="pet" id="yes" value="yes"><br>
-
-            <label for="no">Not</label>
-            <input type="radio" name="pet" id="no" value="no"><br>
-
-            <label for="color">what is your favorite color?</label> 
-            <input name="color" type="color" id="color"><br>
-            <br>
-
-            <label for="time">What time do you go to bed</label>
-            <input name="time" type="time" id="time">
-            <br>
-
-            <label for="cars">What your favorite brand of cars</label><br>
-            <br>
-
-            <select name="car" list="cars" id="cars" size="4" multiple>
-                <option value="bmw">BMW</option>
-                <option value="audi">Audi</option>
-                <option value="lada"selected>Lada</option>
-                <option value="s4" disabled>&nbsp;</option>
-            </select>
-            <br>
-            
-            <label for="workRate">How do you rate your work</label><br>
-            <input name="workRate" type="range" min="0" max="100" step="1" value="50" id="range"><br>
-            <br>
-        </fieldset>
-
-        <fieldset>
-            <legend>Your comments:</legend>
-
-            <p>
-                <textarea name="comment" placeholder="Comments" maxlength="250"></textarea>
-            </p>
-        </fieldset>
-        <br>
+    <form class="container needs-validation" method="post" action="https://mate-academy-form-lesson.herokuapp.com/create-application">
         
-        <input type="submit" value="Submit">
+        <div class="form-row">
+
+            <fieldset class="form-row col-sm-12 col-lg-8">
+
+                <legend class="mb-3"> Personal information</legend>
+
+                <div class="row">
+                    <div class="form-group col-sm-6 col-lg-5 mb-3">
+                        <label for="surname">Surname</label>
+                        <input name="surname" type="text" class="form-control" id="surname" placeholder="Surname">
+                    </div>
+                    <div class="form-group col-sm-6 col-lg-5 mb-3">
+                        <label for="name">Name</label>
+                        <input name="name" type="text" class="form-control" id="name" placeholder="Name">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-sm-6 col-lg-5 mb-3">
+                        <label for="age">How old are you?</label>
+                        <input name="age" type="number" class="form-control" id="age" placeholder="Age">
+                    </div>
+                    <div class="form-group col-sm-6 col-lg-5 mb-3">
+                        <label for="birth">Full date of birth</label>
+                        <input name="birth" type="date" class="form-control" id="birth">
+                    </div>
+                </div>
+
+                <div class="custom-control custom-checkbox mr-sm-2">
+                    <input class="custom-control-input" name="accept" type="checkbox" value="yes" id="accept">
+                    <label class="custom-control-label" for="accept">I accept the term of the agreemen </label>
+                </div>
+
+            </fieldset>
+
+            <hr class="mb-3 table-responsive-lg">
+
+            <fieldset class="form-row col-sm-12 col-lg-4">
+
+                <legend class="mb-3"> Registration </legend>
+
+                <div class="row mb-3">
+                    <div class="form-group col-sm-6 col-lg-12 mb-3">
+                        <label for="email">E-mail</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">@</span>
+                            </div>
+                            <input name="email" type="email" class="form-control" id="email" required placeholder="log@example.com">
+                        </div>
+                    </div>
+
+                    <div class="form-group col-sm-6 col-lg-12 mb-3">
+                        <label for="password">Password</label>
+                        <input name="password" type="password" class="form-control" id="password" placeholder="Password">
+                    </div>
+                </div>
+
+            </fieldset>
+        </div>
+
+        <hr class="md-3">
+
+        <fieldset>
+
+            <legend class="text-center"> An interesting fact about you! </legend>
+
+            <div class="form-group row mb-3">
+                <label class="col-form-label col-sm-6 col-lg-3"> Do you love cats?</label>
+                <div class="col-sm-6 col-lg-5">
+                    <div class="custom-control custom-radio">
+                        <input type="radio" name="pet" id="yes" value="yes" class="custom-control-input">
+                        <label class="custom-control-label" for="yes">Yes</label>
+                    </div>
+
+                    <div class="custom-control custom-radio">
+                        <input type="radio" name="pet" id="no" value="no" class="custom-control-input">
+                        <label class="custom-control-label" for="no">Not</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group row mb-3">
+                <label class="col-form-label col-sm-6 col-lg-3" for="color">what is your favorite color?</label>
+                <div class="col-sm-6 col-lg-2">
+                    <input name="color" type="color" class="form-control" id="color">
+                </div>
+            </div>
+            
+            <div class="form-group row mb-3">
+                <label class="col-form-label col-sm-6 col-lg-3" for="time">What time do you go to bed</label>
+                <div class="col-sm-6 col-lg-3">
+                    <input name="time" type="time" class="form-control" id="time">
+                </div>
+            </div>
+
+            <div class="form-group row mb-3">
+                <label class="col-form-label col-sm-6 col-lg-3" for="cars">What your favorite brand of cars</label>
+                <div class="col-sm-6 col-lg-3">
+                    <select name="car" list="cars" class="form-control" id="cars" size="4" multiple>
+                        <option value="bmw">BMW</option>
+                        <option value="audi">Audi</option>
+                        <option value="lada" selected>Lada</option>
+                        <option value="s4" disabled>&nbsp;</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group row mb-3">
+                <label class="col-form-label col-sm-6 col-lg-3" for="workRate">How do you rate your work</label>
+                <div class="col-sm-6 col-lg-3">
+                    <input name="workRate" type="range" min="0" max="100" step="1" value="50" class="form-control custom-range"
+                        id="range">
+                </div>
+            </div>
+
+        <hr class="mb-3"> 
+
+        </fieldset>
+        
+        <div class="col-sm-8 offset-sm-3 offset-lg-2">
+            <legend class="mb-3">Your comments:</legend>
+            <div class="form-group">
+                <textarea name="comment" placeholder="Comments here" class="form-control col-lg-8" maxlength="250"></textarea>
+            </div>
+        </div>
+
+        <hr class="mb-3">
+
+        <div class="col-lg-12">
+            <div class="row justify-content-md-end mb-3">
+                <input type="submit" class="btn btn-primary col-sm-2 col-lg-4" value="Submit">
+            </div>
+
+            <div class="row justify-content-md-end mb-3">
+                <input type="reset" class="btn btn-primary col-sm-2 col-lg-4" value="Reset">
+            </div>
+        </div>
+
     </form>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
