@@ -121,7 +121,7 @@
             <div class="form-group row mb-3">
                 <label class="col-form-label col-sm-6 col-lg-3" for="cars">What your favorite brand of cars</label>
                 <div class="col-sm-6 col-lg-2">
-                    <select name="car" list="cars" class="form-control" id="cars" size="4" multiple>
+                    <select name="car" class="form-control" id="cars" size="4" multiple>
                         <option value="bmw">BMW</option>
                         <option value="audi">Audi</option>
                         <option value="lada" selected>Lada</option>
@@ -134,7 +134,7 @@
                 <label class="col-form-label col-sm-6 col-lg-3" for="workRate">How do you rate your work</label>
                 <div class="col-sm-6 col-lg-3">
                     <input name="workRate" type="range" min="0" max="100" step="1" value="50" class="form-control custom-range"
-                        id="range">
+                        id="workRate">
                 </div>
             </div>
 
@@ -142,8 +142,10 @@
 
         </fieldset>
         
+        <legend class="offset-sm-3 offset-lg-2 mb-3">Your comments:</legend>
+        
         <div class="col-sm-8 offset-sm-3 offset-lg-2">
-            <legend class="mb-3">Your comments:</legend>
+            
             <div class="form-group">
                 <textarea name="comment" placeholder="Comments here" class="form-control col-lg-8" maxlength="250"></textarea>
             </div>
